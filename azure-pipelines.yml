@@ -7,10 +7,11 @@ pool:
 
 steps:
 - script: |
+    sudo apt-get install default-jre
     sudo apt install google-chrome-stable
     sudo apt-get install testng
     java -cp "./lib/*:./bin"
-    java testng.xml
+    java org.testng.TestNG testng.xml
 
 - task: PublishPipelineArtifact@1
   inputs:

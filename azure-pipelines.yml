@@ -10,7 +10,7 @@ steps:
     sudo apt install google-chrome-stable
     sudo apt-get install testng
     java -cp "./lib/*:./bin"
-    java org.testng.TestNG testng.xml
+    java testng.xml
 
 - task: PublishPipelineArtifact@1
   inputs:
